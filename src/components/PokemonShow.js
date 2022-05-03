@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 
 
 const PokemonShow = () => {
-  const [ pokemon, setPokemon ] = useState('')
+  const [ pokemon, setPokemon ] = useState(null)
   
   const { name } = useParams()
 
@@ -23,55 +23,61 @@ const PokemonShow = () => {
       }
     }
     getPokemon()
-  }, [name])
+  }, [])
 
-  console.log(pokemon.name)
 
 
 
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1>{pokemon.name}</h1>
-          <h2>{pokemon.types[0].type.name}</h2>
-          <div>
-            {pokemon.moves.map((pokemon, index) => {
-              return (
-                <div key={index}>
-                  {pokemon.move.name}
-                </div>
-              )
-            })}
-          </div>
-        </Col>
-        <Col>
-          <h2>{pokemon.id}</h2>
-          <div className='pokemon-image'>
-            <img src={pokemon.sprites.other['official-artwork'].front_default} />
-          </div>
-          <div className='pokemon-stats'>
-            {pokemon.stats.map((stat, index) => {
-              return (
-                <Container key={index}>
-                  <Row>
-                    <Col>
-                      <div>
-                        {stat.stat.name}
-                      </div>
-                      <div>
-                        {stat.base_stat}
-                      </div>
-                    </Col>
-                  </Row>
-                </Container>
-              )
-            })} 
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      {pokemon ?
+        <Container>
+          <Row>
+            <Col>
+              <h1>{pokemon.name}</h1>
+              <h2>{pokemon.types[0].type.name}</h2>
+              <div>
+                {pokemon.moves.map((pokemon, index) => {
+                  return (
+                    <div key={index}>
+                      {pokemon.move.name}
+                    </div>
+                  )
+                })}
+              </div>
+            </Col>
+            <Col>
+              <h2>{pokemon.id}</h2>
+              <div className='pokemon-image'>
+                <img src={pokemon.sprites.other['official-artwork'].front_default} />
+              </div>
+              <div className='pokemon-stats'>
+                {pokemon.stats.map((stat, index) => {
+                  return (
+                    <Container key={index}>
+                      <Row>
+                        <Col>
+                          <div>
+                            {stat.stat.name}
+                          </div>
+                          <div>
+                            {stat.base_stat}
+                          </div>
+                        </Col>
+                      </Row>
+                    </Container>
+                  )
+                })} 
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        :
+        <h1>not loaded</h1>
+      } 
+
+    </div>
   )
 
 }
