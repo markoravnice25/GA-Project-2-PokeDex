@@ -9,9 +9,9 @@ const Home = () => {
     <div className='hero text-center'>
       <section className='hero-container'>
         <div className='title'>
-          <h1 className='display-1'>Pokedex!</h1> <img src="src/images/shiny-furfrou.gif" alt="" />
-          <p className='lead'>Discover all your favourite Pokeman&rsquo;s</p>
-          <Link to='/pokemons' className='btn btn-outline-danger'>Pokemon Index</Link>
+          <img src="https://c.tenor.com/cTPmIsRVrlcAAAAi/pokemon.gif" alt="" />       
+          <p className='lead'>Discover all your favourite Pokemon</p>
+          <Link to='/pokemons' className='btn btn-outline-danger'>PokeDex</Link>
         </div>
       </section>
 

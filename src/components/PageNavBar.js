@@ -11,8 +11,8 @@ const PageNavBar = () => {
   return (
     <Navbar id='navbar' expand="sm">
       <Container>
-        <Navbar.Brand className='navlinks' as={Link} to="/">Home</Navbar.Brand>
-        <Nav.Link className='navlinks' as={Link} to="/pokemons">Find Pokemons!</Nav.Link>
+        <Navbar.Brand as={Link} to="/"><img id='pokeball' src='https://c.tenor.com/CpRW4WUGa3IAAAAi/pok%C3%A9ball-pok%C3%A9mon.gif'></img></Navbar.Brand>
+        <Nav.Link className='navlink' as={Link} to="/pokemons">Find Pokemons!</Nav.Link>
       </Container>
     </Navbar>
   )

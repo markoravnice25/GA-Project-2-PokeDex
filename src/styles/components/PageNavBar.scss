@@ -2,7 +2,12 @@
 
 #navbar {
   background-color: $red-color;
-  .navlinks {
+  .navlink {
     color: $black-color;
+    font-size: large;
+    font-weight: 900;
+  }
+  img {
+    width: 80px;
   }
 }
