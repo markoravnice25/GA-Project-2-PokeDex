@@ -57,6 +57,7 @@ const PokemonShow = () => {
       const evoData = async () => {
         try {
           const { data } = await axios.get(pokemonChain.evolution_chain.url)
+          console.log(data)
           try {
             if (data.chain.evolves_to[0].evolves_to[0].species.name === name){
               setNextEvolution(null)
@@ -67,7 +68,7 @@ const PokemonShow = () => {
               setNextEvolution(data.chain.evolves_to[0].species.name)
             }
           } catch (error) {
-            console.log(error)
+            console.log('caught', error)
           }
         } catch (error) {
           console.log(error)
@@ -132,8 +133,19 @@ const PokemonShow = () => {
                 <img src={pokemon.sprites.other['official-artwork'].front_default} />
               </div>
               <div>
-                {nextEvolution && <p>Next: {nextEvolution}</p>}
-                {previousEvolution && <p>Previous: {previousEvolution}</p>}
+                {nextEvolution && 
+                <div className='next_evolution'>
+                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id + 1}.png`} />
+                  <p>Next: {nextEvolution}</p>
+                </div>
+                }
+                
+                {previousEvolution && 
+                <div className='previous_evolution'>
+                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id - 1}.png`} />
+                  <p>Previous: {previousEvolution}</p>
+                </div>
+                }
               </div>
             </Col>
           </Row>
