@@ -12,7 +12,7 @@ const PageNavBar = () => {
     <Navbar id='navbar' expand="sm">
       <Container>
         <Navbar.Brand className='navlinks' as={Link} to="/">Home</Navbar.Brand>
-        <Nav.Link className='navlinks' as={Link} to="/index">Find Pokemons!</Nav.Link>
+        <Nav.Link className='navlinks' as={Link} to="/pokemons">Find Pokemons!</Nav.Link>
       </Container>
     </Navbar>
   )

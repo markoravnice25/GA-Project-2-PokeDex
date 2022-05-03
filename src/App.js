@@ -7,6 +7,7 @@ import Home from './Home'
 import PageNavBar from './components/PageNavBar'
 import NotFound from './components/NotFound'
 import PokemonIndex from './components/PokemonIndex'
+import PokemonShow from './components/PokemonShow'
 
 const App = () => {
 
@@ -18,7 +19,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='*' element={<NotFound />} />
-          <Route path='/index' element={<PokemonIndex />} />
+          <Route path='/pokemons' element={<PokemonIndex />} />
+          <Route path='/pokemons/:name' element={<PokemonShow />} />
         </Routes>
       </BrowserRouter>
     </main>
