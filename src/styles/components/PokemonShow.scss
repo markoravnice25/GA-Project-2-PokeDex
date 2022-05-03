@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+h2{
+  text-transform: capitalize;
+}
+
+
+.col {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    font-size: 5em;
+    text-transform: uppercase;
+  }
+
+  #show_types{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  .accordion{
+    width: 100%;
+  }
+}
+
+
+.pokemon-image{
+  margin-top: 20px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  h2{
+    margin-top: 10px;
+  }
+}
+
+.pokemon-stats{
+  display: flex;
+  flex-wrap: wrap;
+
+  .stats{
+    margin: 0;
+    width: 50%;
+    border: 1px solid black;
+  }
+}
