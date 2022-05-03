@@ -1,0 +1,8 @@
+@import '../variables.scss';
+
+#navbar {
+  background-color: $red-color;
+  .navlinks {
+    color: $black-color;
+  }
+}
