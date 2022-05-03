@@ -1,19 +1,28 @@
 @import '../variables.scss';
 
 .hero {
-  background-color: $grey-color;
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  background-image: url('../../images/boy.png'), url('../../images/girl.png');
+  background-position: right bottom, left bottom;
+  background-repeat:no-repeat;
+  background-size: contain;
   .hero-container {
+    // background-image: url('https://assets.reedpopcdn.com/pokemon-go-mega-evolution_feature_mPOLCzG.png/BROK/resize/1380%3E/format/jpg/quality/70/pokemon-go-mega-evolution_feature_mPOLCzG.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    margin: 200px 100px;
     background-color: white;
-    margin: 50px 100px;
-    border: 5px solid $black-color;
+    // border: 5px solid $black-color;
     border-radius: 8px;
     padding: 0 100px;
+    .btn {
+      border: 3px solid $red-color;
+    }
   }
 }
