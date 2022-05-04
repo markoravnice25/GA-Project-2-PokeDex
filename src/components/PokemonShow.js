@@ -10,22 +10,25 @@ import { useParams } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import { Accordion } from 'react-bootstrap'
+import Accordion from 'react-bootstrap/Accordion'
 
 
 
 //TODO 2) Arrow function
 const PokemonShow = () => {
+
+  // states
   const [ pokemon, setPokemon ] = useState(null)
   const [ pokemonChain, setPokemonChain] = useState(null)
   
-  const [ previousEvolution, setPreviousEvolution ] = useState(null)
-  const [ previousImage, setPreviousImage ] = useState(null)
-  const [ nextImage, setNextImage ] = useState(null)
-  const [ nextEvolution, setNextEvolution ] = useState(null)
+  const [ previousEvolutionName, setPreviousEvolutionName ] = useState(null)
+  const [ previousEvolutionImage, setPreviousEvolutionImage ] = useState(null)
+  const [ nextEvolutionImage, setNextEvolutionImage ] = useState(null)
+  const [ nextEvolutionName, setNextEvolutionName ] = useState(null)
   
   const { name } = useParams()
 
+  // update pokemon state
   useEffect(() => {
     const getPokemon = async () => {
       try {
@@ -36,13 +39,14 @@ const PokemonShow = () => {
       }
     }
 
-
+    //TODO functions for evoultion names and pictures
+    // 1) retrieves 3rd API info; 2) updates previousEvolutionName state (if it exists)
     const getEvolution = async () => {
       try {
         const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${name}`)
         setPokemonChain(data)
         if (data.evolves_from_species){
-          setPreviousEvolution(data.evolves_from_species.name)
+          setPreviousEvolutionName(data.evolves_from_species.name)
         }
       } catch (error) {
         console.log(error)
@@ -53,17 +57,18 @@ const PokemonShow = () => {
     getEvolution()
   }, [])
 
+  // compares with current name to check if nextEvolutionName exists, if true updates nextEvolutionName state
   useEffect(() => {
     if (pokemonChain){
       const evoData = async () => {
         try {
           const { data } = await axios.get(pokemonChain.evolution_chain.url)
           if (data.chain.evolves_to[0].evolves_to[0] && data.chain.evolves_to[0].evolves_to[0].species.name === name){
-            setNextEvolution(null)
+            setNextEvolutionName(null)
           } else if (data.chain.evolves_to[0].species.name === name) {
-            setNextEvolution(data.chain.evolves_to[0].evolves_to[0].species.name)
+            setNextEvolutionName(data.chain.evolves_to[0].evolves_to[0].species.name)
           } else {
-            setNextEvolution(data.chain.evolves_to[0].species.name)
+            setNextEvolutionName(data.chain.evolves_to[0].species.name)
           }
         } catch (error) {
           console.log(error)
@@ -76,21 +81,22 @@ const PokemonShow = () => {
 
   }, [pokemonChain])
 
-
+  // updating previousEvolutionImage state if previousEvolutionName is truthy
   const getPreviousPokemonImage = async () => {
     try {
-      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${previousEvolution}`)
-      setPreviousImage(data.sprites.front_default)
+      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${previousEvolutionName}`)
+      setPreviousEvolutionImage(data.sprites.front_default)
     } catch (error) {
       console.log(error)
     }
   }
   getPreviousPokemonImage()
 
+  // updating nextEvolutionImage state if nextEvolutionName is truthy
   const getNextPokemonImage = async () => {
     try {
-      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${nextEvolution}`)
-      setNextImage(data.sprites.front_default)
+      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${nextEvolutionName}`)
+      setNextEvolutionImage(data.sprites.front_default)
     } catch (error) {
       console.log(error)
     }
@@ -150,16 +156,16 @@ const PokemonShow = () => {
                 <img src={pokemon.sprites.other['official-artwork'].front_default} />
               </div>
               <div className='evos'>
-                {previousEvolution && 
+                {previousEvolutionName && 
                 <div className='previous_evolution'>
-                  <img src={previousImage} />
-                  <p>Previous: {previousEvolution}</p>
+                  <img src={previousEvolutionImage} />
+                  <p>Previous: {previousEvolutionName}</p>
                 </div>
                 }
-                {nextEvolution && 
+                {nextEvolutionName && 
                 <div className='next_evolution'>
-                  <img src={nextImage} />
-                  <p>Next: {nextEvolution}</p>
+                  <img src={nextEvolutionImage} />
+                  <p>Next: {nextEvolutionName}</p>
                 </div>
                 }
               </div>
