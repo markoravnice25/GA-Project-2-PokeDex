@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import { useNavigate, Link } from 'react-router-dom'
-
 // Import bootstrap components
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
+
+
+
+import IndexComponent from './IndexComponent'
 
 const PokemonIndex = () => {
   // Pokemon State
   const [ pokemons, setPokemons ] = useState([])
+  const [ searchInput, setSearchInput ] = useState('')
 
   useEffect(() => {
     const getPokemon = async () => {
@@ -25,25 +26,38 @@ const PokemonIndex = () => {
     getPokemon()
   }, [])
 
-  return (
-    <Container className='pokemon-list'>
-      <Row>
-        {pokemons.map((pokemon, index) => {
-          const { name } = pokemon
-          return (
-            <Col key={index} md='3' lg='2'>
-              <Link to={`/pokemons/${name}`}>
-                <Card>
-                  <Card.Img variant='top' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`} />
-                  {pokemon.name}
-                </Card>
-              </Link>
-            </Col>
-          )
-        })}
-      </Row>
-    </Container>
 
+  const handleSearch = (e) => {
+    setSearchInput(e.target.value)
+  }
+
+  const handleFilter = () => {
+    return pokemons.filter(pokemon => {
+      const names = pokemon.name.toLowerCase()
+      const searchLower = searchInput.toLowerCase()
+      return (names.includes(searchLower))
+    })
+  }
+
+
+  return (
+    <>
+      <form>
+        <input type='text' placeholder='Search...' value={searchInput} onChange={handleSearch}></input>
+      </form>
+      <Container className='pokemon-list'>
+        <Row>
+          {handleFilter().map((pokemon, index) => {
+            const { name } = pokemon
+            return (
+              <IndexComponent key={index} {
+                ...pokemon
+              }/>
+            )
+          })}
+        </Row>
+      </Container>
+    </>
   )
 }
 

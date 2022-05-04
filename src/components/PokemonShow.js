@@ -34,14 +34,8 @@ const PokemonShow = () => {
       try {
         const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${name}`)
         setPokemonChain(data)
-        try {
-          if (!data.evolves_from_species.name){
-            setPreviousEvolution(null)
-          } else {
-            setPreviousEvolution(data.evolves_from_species.name)
-          }
-        } catch (error) {
-          console.log(error)
+        if (data.evolves_from_species){
+          setPreviousEvolution(data.evolves_from_species.name)
         }
       } catch (error) {
         console.log(error)
@@ -57,18 +51,19 @@ const PokemonShow = () => {
       const evoData = async () => {
         try {
           const { data } = await axios.get(pokemonChain.evolution_chain.url)
-          console.log(data)
-          try {
-            if (data.chain.evolves_to[0].evolves_to[0].species.name === name){
-              setNextEvolution(null)
-            } else if (data.chain.evolves_to[0].species.name === name) {
-              console.log(data)
-              setNextEvolution(data.chain.evolves_to[0].evolves_to[0].species.name)
-            } else {
-              setNextEvolution(data.chain.evolves_to[0].species.name)
-            }
-          } catch (error) {
-            console.log('caught', error)
+          console.log('data', data)
+          console.log(pokemonChain)
+          console.log(data.chain.evolves_to[0].evolves_to[0])
+          if (data.chain.evolves_to[0].evolves_to[0] && data.chain.evolves_to[0].evolves_to[0].species.name === name){
+            console.log('1')
+            setNextEvolution(null)
+          } else if (data.chain.evolves_to[0].species.name === name) {
+            console.log('2')
+            console.log(data)
+            setNextEvolution(data.chain.evolves_to[0].evolves_to[0].species.name)
+          } else {
+            console.log('3')
+            setNextEvolution(data.chain.evolves_to[0].species.name)
           }
         } catch (error) {
           console.log(error)
@@ -150,7 +145,7 @@ const PokemonShow = () => {
           </Row>
         </Container>
         :
-        <h1>not loaded</h1>
+        <h1>Loading...</h1>
       } 
 
     </div>
