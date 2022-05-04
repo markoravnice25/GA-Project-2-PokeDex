@@ -57,5 +57,13 @@ h2{
 .evos {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.previous_evolution{
+  text-align: center;
+}
+
+.next_evolution{
+  text-align: center;
 }
