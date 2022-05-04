@@ -15,6 +15,8 @@ const PokemonShow = () => {
   const [ pokemonChain, setPokemonChain] = useState(null)
   
   const [ previousEvolution, setPreviousEvolution ] = useState(null)
+  const [ previousImage, setPreviousImage ] = useState(null)
+  const [ nextImage, setNextImage ] = useState(null)
   const [ nextEvolution, setNextEvolution ] = useState(null)
   
   const { name } = useParams()
@@ -51,18 +53,11 @@ const PokemonShow = () => {
       const evoData = async () => {
         try {
           const { data } = await axios.get(pokemonChain.evolution_chain.url)
-          console.log('data', data)
-          console.log(pokemonChain)
-          console.log(data.chain.evolves_to[0].evolves_to[0])
           if (data.chain.evolves_to[0].evolves_to[0] && data.chain.evolves_to[0].evolves_to[0].species.name === name){
-            console.log('1')
             setNextEvolution(null)
           } else if (data.chain.evolves_to[0].species.name === name) {
-            console.log('2')
-            console.log(data)
             setNextEvolution(data.chain.evolves_to[0].evolves_to[0].species.name)
           } else {
-            console.log('3')
             setNextEvolution(data.chain.evolves_to[0].species.name)
           }
         } catch (error) {
@@ -75,6 +70,28 @@ const PokemonShow = () => {
     }
 
   }, [pokemonChain])
+
+
+  const getPreviousPokemonImage = async () => {
+    try {
+      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${previousEvolution}`)
+      setPreviousImage(data.sprites.front_default)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  getPreviousPokemonImage()
+
+  const getNextPokemonImage = async () => {
+    try {
+      const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${nextEvolution}`)
+      setNextImage(data.sprites.front_default)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  getNextPokemonImage()
+
 
   return (
     <div>
@@ -130,13 +147,13 @@ const PokemonShow = () => {
               <div className='evos'>
                 {previousEvolution && 
                 <div className='previous_evolution'>
-                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id - 1}.png`} />
+                  <img src={previousImage} />
                   <p>Previous: {previousEvolution}</p>
                 </div>
                 }
                 {nextEvolution && 
                 <div className='next_evolution'>
-                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id + 1}.png`} />
+                  <img src={nextImage} />
                   <p>Next: {nextEvolution}</p>
                 </div>
                 }
