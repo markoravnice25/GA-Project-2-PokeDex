@@ -1,8 +1,11 @@
+//TODO 1) imports
+//React
 import React from 'react'
 
-//react-router-dom components
+//react-router-dom
 import { Link } from 'react-router-dom'
 
+//TODO 2) Arrow function with return statement which displays on webpage.
 const Home = () => {
 
   return (
@@ -14,10 +17,9 @@ const Home = () => {
           <Link to='/pokemons' className='btn btn-outline-danger'>PokeDex</Link>
         </div>
       </section>
-
     </div>
   )
 
 }
-
+//TODO 3) export Home.js and import to App.js
 export default Home
