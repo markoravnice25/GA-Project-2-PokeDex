@@ -1,12 +1,16 @@
+//TODO 1) imports
+//React
 import React from 'react'
-// Bringin in Link for react navigation
-import { Link, useNavigate } from 'react-router-dom'
 
-// Import React Components
+// Bringing in Link for react navigation
+import { Link } from 'react-router-dom'
+
+// Bootstrap Components
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 
+//TODO 2) Arrow function
 const PageNavBar = () => {
   return (
     <Navbar id='navbar' expand="sm">
@@ -18,4 +22,5 @@ const PageNavBar = () => {
   )
 }
 
+//TODO 3) export PageNavBar.js and import to App.js
 export default PageNavBar

@@ -5,7 +5,7 @@ import React from 'react'
 //react-router-dom
 import { Link } from 'react-router-dom'
 
-//TODO 2) Arrow function with return statement which displays on webpage.
+//TODO 2) Arrow function
 const Home = () => {
 
   return (
@@ -19,7 +19,6 @@ const Home = () => {
       </section>
     </div>
   )
-
 }
 //TODO 3) export Home.js and import to App.js
 export default Home

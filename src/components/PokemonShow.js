@@ -1,7 +1,12 @@
+//TODO 1) imports
+//React & Axios
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useParams, Link } from 'react-router-dom'
 
+//react-router-dom
+import { useParams } from 'react-router-dom'
+
+// Bootstrap
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -9,7 +14,7 @@ import { Accordion } from 'react-bootstrap'
 
 
 
-
+//TODO 2) Arrow function
 const PokemonShow = () => {
   const [ pokemon, setPokemon ] = useState(null)
   const [ pokemonChain, setPokemonChain] = useState(null)
@@ -170,6 +175,5 @@ const PokemonShow = () => {
 
 }
 
-
-
+//TODO 3) export PokemonShow.js and import to App.js
 export default PokemonShow

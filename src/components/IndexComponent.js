@@ -1,14 +1,16 @@
+//TODO 1) imports
+//React
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
 
+//react-router-dom
 import { Link } from 'react-router-dom'
 
-// Import bootstrap components
+// Bootstrap
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 
+//TODO 2) Arrow function
 const IndexComponent = ({ name, url }) => {
-
 
   const getIndex = () => {
     const urlSplit = url.split('/')
@@ -30,13 +32,5 @@ const IndexComponent = ({ name, url }) => {
   )
 }
 
-
-
-
-
-
-
-
-
-
+//TODO 3) export IndexComponent.js and import to App.js
 export default IndexComponent
