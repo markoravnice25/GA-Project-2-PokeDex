@@ -159,13 +159,13 @@ const PokemonShow = () => {
                 {previousEvolutionName && 
                 <div className='previous_evolution'>
                   <img src={previousEvolutionImage} />
-                  <p>Previous: {previousEvolutionName}</p>
+                  <p>Previous Evolution: {previousEvolutionName}</p>
                 </div>
                 }
                 {nextEvolutionName && 
                 <div className='next_evolution'>
                   <img src={nextEvolutionImage} />
-                  <p>Next: {nextEvolutionName}</p>
+                  <p>Next Evolution: {nextEvolutionName}</p>
                 </div>
                 }
               </div>
