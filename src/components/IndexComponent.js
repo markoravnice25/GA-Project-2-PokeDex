@@ -17,11 +17,13 @@ const IndexComponent = ({ name, url }) => {
 
 
   return (
-    <Col md='3' lg='2'>
+    <Col className='pokemon-card' md='3' lg='2'>
       <Link to={`/pokemons/${name}`}>
         <Card>
           <Card.Img variant='top' src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getIndex()}.png`} />
-          {name}
+          <div>
+            {name}
+          </div>
         </Card>
       </Link>
     </Col>
