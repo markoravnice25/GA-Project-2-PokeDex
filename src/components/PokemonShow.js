@@ -132,18 +132,17 @@ const PokemonShow = () => {
                 <h2>#{pokemon.id}</h2>
                 <img src={pokemon.sprites.other['official-artwork'].front_default} />
               </div>
-              <div>
-                {nextEvolution && 
-                <div className='next_evolution'>
-                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id + 1}.png`} />
-                  <p>Next: {nextEvolution}</p>
-                </div>
-                }
-                
+              <div className='evos'>
                 {previousEvolution && 
                 <div className='previous_evolution'>
                   <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id - 1}.png`} />
                   <p>Previous: {previousEvolution}</p>
+                </div>
+                }
+                {nextEvolution && 
+                <div className='next_evolution'>
+                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id + 1}.png`} />
+                  <p>Next: {nextEvolution}</p>
                 </div>
                 }
               </div>

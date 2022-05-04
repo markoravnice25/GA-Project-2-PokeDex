@@ -16,7 +16,7 @@ const PokemonIndex = () => {
   useEffect(() => {
     const getPokemon = async () => {
       try {
-        const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=100')
+        const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=1126')
         setPokemons(data.results)
       } catch (error) {
         console.log(error)

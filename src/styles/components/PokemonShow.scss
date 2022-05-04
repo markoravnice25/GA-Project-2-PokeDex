@@ -45,10 +45,17 @@ h2{
 .pokemon-stats{
   display: flex;
   flex-wrap: wrap;
-
+  margin-bottom: 50px;
+  margin-top: 30px;
   .stats{
     margin: 0;
     width: 50%;
     border: 1px solid black;
   }
+}
+
+.evos {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
