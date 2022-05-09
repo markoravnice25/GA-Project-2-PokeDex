@@ -51,7 +51,7 @@ const PokemonIndex = () => {
       <Container className='pokemon-list'>
         <Row>
           {handleFilter().map((pokemon, index) => {
-            const { name } = pokemon
+            // const { name } = pokemon
             return (
               <IndexComponent key={index} {
                 ...pokemon
