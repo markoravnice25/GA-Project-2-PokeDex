@@ -18,6 +18,8 @@ This application lists all of the abailable Pokémon in the game along with the 
 
 The  user searches for a Pokémon of their choice from 1126 Pokémon available in the index page. They are then led to the show page which displays the individual Pokémon's characteristics, including: Pokémon stats; moves; picture; to what character the Pokémon can evolve to.
 
+![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
+
 ## Brief
 
 This project was a two day paired hackathon. I worked with Rob and our task was to create a working application with several components and a router, the application is to consume a public API and present the requests by a user on the application.
