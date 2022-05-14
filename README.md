@@ -111,7 +111,7 @@ The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to
 
 ## Visit the website:
 
-* To visit the page, check out https://app.netlify.com/sites/marko-pokemon/overview
+* To visit the page, check out my [Netlify link](https://app.netlify.com/sites/marko-pokemon/overview)
 * To run your local server, use 'yarn start'.
 
 
