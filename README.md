@@ -14,7 +14,7 @@ Table of Contents:
 * Challenges
 * Bugs
 * Future improvements
-* Key Learnings
+* [Visit the website!](https://marko-pokemon.netlify.app/)
 
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
 
@@ -79,11 +79,11 @@ The home page (Home.js) was styled using Bootstrap, and we used Pokémon gifs do
 
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168438276-3269a585-c4f5-4021-85a2-a3375a95c969.png)
 
-The index (PokemonIndex.js) page was fairly simple in design also, as we used the Bootstrap components <Container /> and <Row /> to create the  rows of Pokémon to be displayed.
+The index (PokemonIndex.js) page was fairly simple in design also, as we used the Bootstrap components <Container /> and <Row /> to create seemingly endless rows of 6 Pokémon per row.
 
 We created handleFilter() and handleSearch() functions to allow the user to seacrh for a Pokémon.
 
-We used a useEffect() and an async function to fetch data from the public API, and then update the state of our 'pokemons' array.
+We used a useEffect() and an axios requests to fetch data from the public API, and then update the state of our 'pokemons' array.
 
 ![Pokémon Index page](https://user-images.githubusercontent.com/101732786/168439030-1d33530c-f7ae-4bd9-a55a-6bc9e6c79bc0.png)
 
@@ -91,14 +91,32 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 
 ![Pokémon Show page](https://user-images.githubusercontent.com/101732786/168439187-b0581b40-7f13-4d0c-b713-564002c97454.png)
 
-## API request:
+## Technology used:
 
-The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to fetch all the 1126 Pokémon available (path='/pokemons') and a GET request to fetch individual Pokémon by name ('/pokemons/:name'). The other endpoints accessed were required for the Pokémon show page: stats and moves.
+#### Front-end:
+* React
+* JSX
+* Axios
+* SCSS
+* Bootstrap
+* React Router Dom
+
+#### API:
+* The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to fetch all the 1126 Pokémon available (path='/pokemons') and a GET request to fetch individual Pokémon by name ('/pokemons/:name'). The other endpoints accessed were required for the Pokémon show page: stats and moves.
 
 ![Pokemon API document](https://user-images.githubusercontent.com/101732786/168439553-60f7d363-27e7-4362-b574-97a6742a8cad.png)
 
+#### Dev tools:
+VS code
+Yarn
+Insomnia
+Git
+Github
+Google Chrome dev tools
+Excalidraw (Wireframe design)
+Netlify (deployment)
 
-## Project key learnings:
+## Key learnings:
 
 * learning to pair code and delegate tasks whilst working to meet a deadline;
 * consuming a massive API and prioritising what endpoints to fetch as the pokeapi is a huge API.
@@ -109,14 +127,14 @@ The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to
 
 * Creating the Pokémon evolution images and names to display correctly.
 
+## Bugs
+
+* No bugs apparently present. The API was clean an easy to fetch data from. We had our biggest issues with the Pokémon evolution feature - but we were able to solve that by creating a pokemonChain state which, if truthy, would engage evoData async function which would set the values of the evolution name and image.
+
 ## Future improvements
 
 * Create buttons/links to access 100 Pokemon at a time - as the index displays all 1126 Pokémon which is a little untidy.
 * Create filter for Pokémon displayed - for example Pokémon which were created in a certain year; strongest Pokémon; Pokémon with 3 evolutions and other variations.
-
-## Bugs
-
-* No bugs apparently present. The API was clean an easy to fetch data from. We had our biggest issues with the Pokémon evolution feature - but we were able to solve that by creating a pokemonChain state which, if truthy, would engage evoData async function which would set the values of the evolution name and image.
 
 ## Visit the website:
 
