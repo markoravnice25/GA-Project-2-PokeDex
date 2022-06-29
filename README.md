@@ -7,6 +7,7 @@ Table of Contents:
 * Project Overview
 * Brief
 * Planning
+* Approach taken
 * Technologies Used
 * Featured Code
 * Key Learnings
@@ -44,14 +45,14 @@ Link to the [API documentation](https://pokeapi.co/docs/v2#pokemon)
 
 Upon deciding on the Pokémon API , we created a wireframe planning out the visuals of the site and the functionality.
 
-## Home page
+#### Home page
 
 * A nav bar with a home link on the left side which navigates to the home page; an index link on the right side which navigates to the index page.
 * 12 buttons with links to different arrays of Pokémon, with each button navigating to 100 Pokémon.
 
 <img width="371" alt="wireframe-homepage" src="https://user-images.githubusercontent.com/101732786/168433846-1f6dfd5a-aac7-4817-8ad2-0a0da5eb7814.png">
 
-## Index Page
+#### Index Page
 
 * a seacrh bar in the opt right which allows you to search by charaxter strings for the Pokémon of your choosing;
 * A navigation dropdown on the top left which allows you to choose a different array of Pokémon to choose from;
@@ -59,7 +60,7 @@ Upon deciding on the Pokémon API , we created a wireframe planning out the visu
 
 <img width="595" alt="wireframe-index page" src="https://user-images.githubusercontent.com/101732786/168434452-c269fb65-b9fa-4fd6-a900-dfa295619d18.png">
 
-## Show page
+#### Show page
 
 * Name and ID of Pokémon;
 * Picture
