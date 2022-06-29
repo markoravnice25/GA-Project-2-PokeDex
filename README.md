@@ -40,7 +40,7 @@ I preferred to consume a football API as I'm interested in that field; my code-p
 
 Link to the [API](https://pokeapi.co/api/v2/pokemon/)
 
-Link to the API documentation: https://pokeapi.co/docs/v2#pokemon
+Link to the [API documentation](https://pokeapi.co/docs/v2#pokemon)
 
 Upon deciding on the Pokémon API , we created a wireframe planning out the visuals of the site and the functionality.
 
