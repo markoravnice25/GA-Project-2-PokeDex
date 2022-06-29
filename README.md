@@ -2,6 +2,19 @@
 
 # Project 2: PokeDex!
 
+Table of Contents:
+
+* Project Overview
+* Game Brief
+* Planning
+* Technologies Used
+* Featured Code
+* Key Learnings
+* Challenges
+* Bugs
+* Future improvements
+* Key Learnings
+
 ## Overview
 
 A little bit about Pokémon game as described on : Players are known as Pokémon Trainers and they have three main goals: collect Pokémon; train Pokémon, battle other Pokémon.
