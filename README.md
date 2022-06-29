@@ -107,21 +107,33 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 ![Pokemon API document](https://user-images.githubusercontent.com/101732786/168439553-60f7d363-27e7-4362-b574-97a6742a8cad.png)
 
 #### Dev tools:
-VS code
-Yarn
-Insomnia
-Git
-Github
-Google Chrome dev tools
-Excalidraw (Wireframe design)
-Netlify (deployment)
+* VS code
+* Yarn
+* Insomnia
+* Git
+* Github
+* Google Chrome dev tools
+* Excalidraw (Wireframe design)
+* Netlify (deployment)
+
+## Featured Code:
+
+* This was the first project where we used an axios request to fetch data from a public API. It's a really simple piece of code but doing it for the first time was challenging. In this case, we have a useState() for pokemons which we update upon fetching data from the API and we also destructure { data } to have cleaner code. A good learning was also which dependencies to use at the end of the useEffect() - in this case, we use an empty array because we want the data to be fetched only once (upon initial render).
+
+<img width="1158" alt="featured-code-project-2" src="https://user-images.githubusercontent.com/101732786/176465320-d336d1c5-accf-4f3f-be7a-73c1861d12d9.png">
 
 ## Key learnings:
 
-* learning to pair code and delegate tasks whilst working to meet a deadline;
-* consuming a massive API and prioritising what endpoints to fetch as the pokeapi is a huge API.
-* using Bootstrap to style the pages.
-* separating the .js files into deifferent components to make the code cleaner.
+* Learning to pair code and delegate tasks whilst working to meet a deadline;
+* Consuming a massive API and prioritising which endpoints to fetch as the pokeapi is a huge API.
+* Using Bootstrap to style the pages.
+* Separating the .js files into deifferent components to make the code cleaner.
+* Using React for the first time
+* Using Insomnia for the first time
+* Learning how to consume a public API
+* Deployment on Netlify
+* Axios requests
+* SCSS
 
 ## Challenges:
 
@@ -129,7 +141,7 @@ Netlify (deployment)
 
 ## Bugs
 
-* No bugs apparently present. The API was clean an easy to fetch data from. We had our biggest issues with the Pokémon evolution feature - but we were able to solve that by creating a pokemonChain state which, if truthy, would engage evoData async function which would set the values of the evolution name and image.
+* No bugs apparently present. The API was clean and easy to fetch data from. We had our biggest issues with the Pokémon evolution feature - but we were able to solve that by creating a pokemonChain state which, if truthy, would engage evoData async function which would set the values of the evolution name and image.
 
 ## Future improvements
 
@@ -139,8 +151,4 @@ Netlify (deployment)
 ## Visit the website:
 
 * To visit the page, check out my [Netlify link](https://marko-pokemon.netlify.app/)
-* To run your local server, use 'yarn start'.
-
-
-
-
+* To run on your local server, use 'yarn start'.
