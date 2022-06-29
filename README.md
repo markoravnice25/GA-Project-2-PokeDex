@@ -1,11 +1,11 @@
-## General Assembly Software Engineering Immersive March - July 2022
+## General Assembly Software Engineering Immersive (March - July 2022)
 
 # Project 2: PokeDex!
 
 Table of Contents:
 
 * Project Overview
-* Game Brief
+* Brief
 * Planning
 * Technologies Used
 * Featured Code
@@ -15,15 +15,12 @@ Table of Contents:
 * Future improvements
 * Key Learnings
 
-## Overview
+## Project Overview
 
-A little bit about Pokémon game as described on : Players are known as Pokémon Trainers and they have three main goals: collect Pokémon; train Pokémon, battle other Pokémon.
+This is my second project which was pair-coded with another student and we had 2 days to submit the final product.
+We decided to make a Pokémon page as we had found a very good API which to use for the project. A little bit about Pokémon - players are known as Pokémon Trainers and they have three main goals: collect Pokémon; train Pokémon, battle other Pokémon. We decided to create an application which lists all Pokémon available as well as their characteristics.
 
-Here is the official Pokémon website.
-
-https://www.pokemon.com/us/
-
-This application lists all of the abailable Pokémon in the game along with the characteristics of these Pokémon. The application includes:
+The application includes:
 
 1) home page;
 2) an index page;
