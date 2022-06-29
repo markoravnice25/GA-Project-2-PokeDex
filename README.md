@@ -1,4 +1,4 @@
-## General Assembly
+## General Assembly Software Engineering Immersive March - July 2022
 
 # Project 2: PokeDex!
 
