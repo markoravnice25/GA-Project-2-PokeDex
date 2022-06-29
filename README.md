@@ -15,6 +15,8 @@ Table of Contents:
 * Future improvements
 * Key Learnings
 
+![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
+
 ## Project Overview
 
 This is my second project which was pair-coded with another student and we had 2 days to submit the final product.
@@ -27,8 +29,6 @@ The application includes:
 3) a show page.
 
 The  user searches for a Pokémon of their choice from 1126 Pokémon available in the index page. They are then led to the show page which displays the individual Pokémon's characteristics, including: Pokémon stats; moves; picture; to what character the Pokémon can evolve to.
-
-![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
 
 ## Brief
 
