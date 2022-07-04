@@ -1,8 +1,11 @@
 ## General Assembly Software Engineering Immersive (March - July 2022)
 
-# Project 2: PokeDex!
+# Project 2: [PokeDex!](https://marko-pokemon.netlify.app/)
 
-Table of Contents:
+## Code installation
+* To run on your local server, use 'yarn start'.
+
+## Table of Contents:
 
 * Project Overview
 * Brief
@@ -151,4 +154,4 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 ## Visit the website:
 
 * To visit the page, check out my [Netlify link](https://marko-pokemon.netlify.app/)
-* To run on your local server, use 'yarn start'.
+
