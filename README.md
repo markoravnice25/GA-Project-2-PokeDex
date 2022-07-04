@@ -9,7 +9,7 @@
 * [Brief](#brief)
 * [Planning](#planning)
 * [Approach taken](#approach-taken)
-* [Technologies Used](#technologies)
+* [Technologies Used](#technologies-used)
 * [Featured Code](#featured-code)
 * [Key Learnings](#key-learnings)
 * [Challenges](#challenges)
