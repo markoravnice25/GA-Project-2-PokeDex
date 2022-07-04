@@ -104,11 +104,6 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 * Bootstrap
 * React Router Dom
 
-#### API:
-* The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to fetch all the 1126 Pokémon available (path='/pokemons') and a GET request to fetch individual Pokémon by name ('/pokemons/:name'). The other endpoints accessed were required for the Pokémon show page: stats and moves.
-
-![Pokemon API document](https://user-images.githubusercontent.com/101732786/168439553-60f7d363-27e7-4362-b574-97a6742a8cad.png)
-
 #### Dev tools:
 * VS code
 * Yarn
@@ -118,6 +113,11 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 * Google Chrome dev tools
 * Excalidraw (Wireframe design)
 * Netlify (deployment)
+
+#### API:
+* The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to fetch all the 1126 Pokémon available (path='/pokemons') and a GET request to fetch individual Pokémon by name ('/pokemons/:name'). The other endpoints accessed were required for the Pokémon show page: stats and moves.
+
+![Pokemon API document](https://user-images.githubusercontent.com/101732786/168439553-60f7d363-27e7-4362-b574-97a6742a8cad.png)
 
 ## Featured Code:
 
