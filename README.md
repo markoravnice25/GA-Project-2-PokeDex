@@ -4,21 +4,22 @@
 
 ## Table of Contents:
 
-* Project Overview
-* Brief
-* Planning
-* Approach taken
-* Technologies Used
-* Featured Code
-* Key Learnings
-* Challenges
-* Bugs
-* Future improvements
+* [Code Installation](#code-installation)
+* [Project Overview](#project-overview)
+* [Brief](#brief)
+* [Planning](#planning)
+* [Approach taken](#approach-taken)
+* [Technologies Used](#technologies)
+* [Featured Code](#featured-code)
+* [Key Learnings](#key-learnings)
+* [Challenges](#challenges)
+* [Bugs](#bugs)
+* [Future improvements](#future-improvements)
 * [Website Link](https://marko-pokemon.netlify.app/)
 
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
 
-## Code installation
+## Code Installation
 * To run on your local server, use 'yarn start'.
 
 ## Project Overview
