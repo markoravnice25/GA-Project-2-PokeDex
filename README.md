@@ -2,10 +2,6 @@
 
 # Project 2: [PokeDex!](https://marko-pokemon.netlify.app/)
 
-## Link/Code installation
-* [Visit the website!](https://marko-pokemon.netlify.app/)
-* To run on your local server, use 'yarn start'.
-
 ## Table of Contents:
 
 * Project Overview
@@ -18,8 +14,12 @@
 * Challenges
 * Bugs
 * Future improvements
+* [Website Link](https://marko-pokemon.netlify.app/)
 
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
+
+## Code installation
+* To run on your local server, use 'yarn start'.
 
 ## Project Overview
 
