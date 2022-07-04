@@ -2,7 +2,8 @@
 
 # Project 2: [PokeDex!](https://marko-pokemon.netlify.app/)
 
-## Code installation
+## Link/Code installation
+* [Visit the website!](https://marko-pokemon.netlify.app/)
 * To run on your local server, use 'yarn start'.
 
 ## Table of Contents:
@@ -17,7 +18,6 @@
 * Challenges
 * Bugs
 * Future improvements
-* [Visit the website!](https://marko-pokemon.netlify.app/)
 
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
 
@@ -150,8 +150,3 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 
 * Create buttons/links to access 100 Pokemon at a time - as the index displays all 1126 Pokémon which is a little untidy.
 * Create filter for Pokémon displayed - for example Pokémon which were created in a certain year; strongest Pokémon; Pokémon with 3 evolutions and other variations.
-
-## Visit the website:
-
-* To visit the page, check out my [Netlify link](https://marko-pokemon.netlify.app/)
-
