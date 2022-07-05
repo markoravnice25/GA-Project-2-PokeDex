@@ -25,7 +25,7 @@
 ## Project Overview
 
 This is my second project which was pair-coded with another student and we had 2 days to submit the final product.
-We decided to make a Pokémon page as we had found a very good API which to use for the project. A little bit about Pokémon - players are known as Pokémon Trainers and they have three main goals: collect Pokémon; train Pokémon, battle other Pokémon. We decided to create an application which lists all Pokémon available as well as their characteristics.
+We decided to make a Pokémon page as we had found a very good API which to use for the project. A little bit about Pokémon - players are known as Pokémon Trainers and they have three main goals: collect Pokémon; train Pokémon; battle other Pokémon. We decided to create an application which lists all Pokémon available as well as their characteristics.
 
 The application includes:
 
@@ -41,7 +41,7 @@ This project was a two day paired hackathon. Our task was to create a working ap
 
 ## Planning
 
-I preferred to consume a football API as I'm interested in that field; my code-partner preferred a Pokémon API as Pokémon were a big part of his childhood. We decided to go for the Pokémon API as it was more detailed and had a seeming never ending array of possibilities in regards to the amount of data which we could fetch. The API allowed for GET requests only, so we won't going to add (POST), update (PUT) or remove (DELETE) any data.
+I preferred to consume a football API as I'm interested in that field; my code-partner preferred a Pokémon API as Pokémon were a big part of his childhood. We decided to go for the Pokémon API as it was more detailed and had a seemingly never ending array of possibilities in regards to the amount of data which we could fetch. We pair-coded using Zoom; used Slack to send and receive information; used [Excalidraw](https://excalidraw.com/) to draw our wireframe; and used Google Docs to log our progress. The API allowed for GET requests only, so we weren’t going to add (POST), update (PUT) or remove (DELETE) any data.
 
 Link to the [API](https://pokeapi.co/api/v2/pokemon/)
 
@@ -58,7 +58,7 @@ Upon deciding on the Pokémon API , we created a wireframe planning out the visu
 
 #### Index Page
 
-* A seacrh bar in the top right which allows you to search by character strings for the Pokémon of your choosing
+* A search bar in the top right which allows you to search by character strings for the Pokémon of your choosing
 * A navigation dropdown on the top left which allows you to choose a different array of Pokémon to choose from
 * Individual Pokémon cards arranged into 20 rows of 5 Pokémon in each row. Each card links to an individual Pokémon page of the chosen Pokémon
 
@@ -75,17 +75,17 @@ Upon deciding on the Pokémon API , we created a wireframe planning out the visu
 
 ## Approach Taken
 
-* Day 1: We had our wireframe approved by our head trainer within one hour of starting. We started pair-coding to create the functionality of the Nav bar, followed by the home page. We then worked on the functionality of the Index page, before realizing that it would be wiser to delegate stand alone tasks in order to have the project finsihed on time. I styled the home page while my code-partner finished the functionality of the index page.
+* Day 1: We had our wireframe approved by our head trainer within one hour of starting. We started pair-coding to create the functionality of the Nav bar, followed by the home page. We then worked on the functionality of the Index page, before realizing that it would be wiser to delegate stand alone tasks in order to have the project finished on time. I styled the home page while my code-partner finished the functionality of the index page.
 
-* Day 2: We worked on the show page together, and then delegated tasks again, with my code-partner finishing the functionality of the Show page, whilst I styled the Index page. We completed the MVP required with ampple time left - so we pair-coded and added the feature of displaying the pictures of the previous and next evolutions of the Pokémon under the Pokémon picture on the Pokémon show page.
+* Day 2: We worked on the show page together, and then delegated tasks again, with my code-partner finishing the functionality of the Show page, whilst I styled the Index page. We completed the MVP required with ample time left - so we pair-coded and added the feature of displaying the pictures of the previous and next evolutions of the Pokémon under the Pokémon picture on the Pokémon show page.
 
-The home page (Home.js) was styled using Bootstrap, and we used Pokémon gifs dowloaded from [here](https://tenor.com/search/pokemon-stickers)
+The home page (Home.js) was styled using Bootstrap, and we used Pokémon gifs downloaded from [here](https://tenor.com/search/pokemon-stickers)
 
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168438276-3269a585-c4f5-4021-85a2-a3375a95c969.png)
 
 The index (PokemonIndex.js) page was fairly simple in design also, as we used the Bootstrap components <Container /> and <Row /> to create seemingly endless rows of 6 Pokémon per row.
 
-We created handleFilter() and handleSearch() functions to allow the user to seacrh for a Pokémon.
+We created handleFilter() and handleSearch() functions to allow the user to search for a Pokémon.
 
 We used a useEffect() and an axios requests to fetch data from the public API, and then update the state of our 'pokemons' array.
 
@@ -131,7 +131,7 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 * Learning to pair code and delegate tasks whilst working to meet a deadline;
 * Consuming a massive API and prioritising which endpoints to fetch as the pokeapi is a huge API.
 * Using Bootstrap to style the pages.
-* Separating the .js files into deifferent components to make the code cleaner.
+* Separating the .js files into different components to make the code cleaner.
 * Using React for the first time
 * Using Insomnia for the first time
 * Learning how to consume a public API
