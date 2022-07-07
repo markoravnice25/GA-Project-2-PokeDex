@@ -20,7 +20,7 @@
 ![Pokémon home page](https://user-images.githubusercontent.com/101732786/168440028-423931ff-33af-49c5-b8f0-741c837d468e.png)
 
 ## Code Installation
-* To run on your local server, use 'yarn start'.
+* To run on your local server, use 'yarn start'
 
 ## Project Overview
 
@@ -75,9 +75,9 @@ Upon deciding on the Pokémon API , we created a wireframe planning out the visu
 
 ## Approach Taken
 
-* Day 1: We had our wireframe approved by our head trainer within one hour of starting. We started pair-coding to create the functionality of the Nav bar, followed by the home page. We then worked on the functionality of the Index page, before realizing that it would be wiser to delegate stand alone tasks in order to have the project finished on time. I styled the home page while my code-partner finished the functionality of the index page.
+* Day 1: We had our wireframe approved by our head trainer within one hour of starting. We started pair-coding to create the functionality of the Nav bar, followed by the home page. We then worked on the functionality of the Index page, before realizing that it would be wiser to delegate stand alone tasks in order to have the project finished on time. I styled the home page while my code-partner finished the functionality of the index page
 
-* Day 2: We worked on the show page together, and then delegated tasks again, with my code-partner finishing the functionality of the Show page, whilst I styled the Index page. We completed the MVP required with ample time left - so we pair-coded and added the feature of displaying the pictures of the previous and next evolutions of the Pokémon under the Pokémon picture on the Pokémon show page.
+* Day 2: We worked on the show page together, and then delegated tasks again, with my code-partner finishing the functionality of the Show page, whilst I styled the Index page. We completed the MVP required with ample time left - so we pair-coded and added the feature of displaying the pictures of the previous and next evolutions of the Pokémon under the Pokémon picture on the Pokémon show page
 
 The home page (Home.js) was styled using Bootstrap, and we used Pokémon gifs downloaded from [here](https://tenor.com/search/pokemon-stickers)
 
@@ -116,26 +116,26 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 * Netlify (deployment)
 
 #### API:
-* The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to fetch all the 1126 Pokémon available (path='/pokemons') and a GET request to fetch individual Pokémon by name ('/pokemons/:name'). The other endpoints accessed were required for the Pokémon show page: stats and moves.
+* The 'pokeapi' is a huge library of Pokémon endpoints. We used a GET request to fetch all the 1126 Pokémon available (path='/pokemons') and a GET request to fetch individual Pokémon by name ('/pokemons/:name'). The other endpoints accessed were required for the Pokémon show page: stats and moves
 
 ![Pokemon API document](https://user-images.githubusercontent.com/101732786/168439553-60f7d363-27e7-4362-b574-97a6742a8cad.png)
 
 ## Featured Code:
 
-* This was the first project where we learned to have different JavaScript files seperated into component files which are called in App.js. This was a great learning experience on how to make code cleaner and more easily readable/accessible for others who look at the code later.
+* This was the first project where we learned to have different JavaScript files seperated into component files which are called in App.js. This was a great learning experience on how to make code cleaner and more easily readable/accessible for others who look at the code later
 
 <img width="461" alt="pokedex-featured-code" src="https://user-images.githubusercontent.com/101732786/177733742-c3dcfb14-5670-4105-8ec4-7b03b24aacb9.png">
 
-* This was the first project where we used an axios request to fetch data from a public API. It's a really simple piece of code but doing it for the first time was challenging. In this case, we have a useState() for pokemons which we update upon fetching data from the API and we also destructure { data } to have cleaner code. A good learning was also which dependencies to use at the end of the useEffect() - in this case, we use an empty array because we want the data to be fetched only once (upon initial render).
+* This was the first project where we used an axios request to fetch data from a public API. It's a really simple piece of code but doing it for the first time was challenging. In this case, we have a useState() for pokemons which we update upon fetching data from the API and we also destructure { data } to have cleaner code. A good learning was also which dependencies to use at the end of the useEffect() - in this case, we use an empty array because we want the data to be fetched only once (upon initial render)
 
 <img width="1158" alt="featured-code-project-2" src="https://user-images.githubusercontent.com/101732786/176465320-d336d1c5-accf-4f3f-be7a-73c1861d12d9.png">
 
 ## Key learnings:
 
-* Learning to pair code and delegate tasks whilst working to meet a deadline;
-* Consuming a massive API and prioritising which endpoints to fetch as the pokeapi is a huge API.
-* Using Bootstrap to style the pages.
-* Separating the .js files into different components to make the code cleaner.
+* Learning to pair code and delegate tasks whilst working to meet a deadline
+* Consuming a massive API and prioritising which endpoints to fetch as the pokeapi is a huge API
+* Using Bootstrap to style the pages
+* Separating the .js files into different components to make the code cleaner
 * Using React for the first time
 * Using Insomnia for the first time
 * Learning how to consume a public API
@@ -145,19 +145,19 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 
 ## Wins:
 
-* GIFs on the Home Page are a nice touch.
-* Completing a project in a short period of time.
-* The colour scheme is suitable and congruent with the Pokémon ball!
+* GIFs on the Homepage are a nice touch.
+* Completing a project in a short period of time
+* The colour scheme is suitable and congruent with the Pokémon ball
 
 ## Challenges:
 
-* Creating the Pokémon evolution images and names to display correctly.
+* Creating the Pokémon evolution images and names to display correctly
 
 ## Bugs
 
-* No bugs apparently present. The API was clean and easy to fetch data from. We had our biggest issues with the Pokémon evolution feature - but we were able to solve that by creating a pokemonChain state which, if truthy, would engage evoData async function which would set the values of the evolution name and image.
+* No bugs apparently present. The API was clean and easy to fetch data from. We had our biggest issues with the Pokémon evolution feature - but we were able to solve that by creating a pokemonChain state which, if truthy, would engage evoData async function which would set the values of the evolution name and image
 
 ## Future improvements
 
-* Create buttons/links to access 100 Pokemon at a time - as the index displays all 1126 Pokémon which is a little untidy.
-* Create filter for Pokémon displayed - for example Pokémon which were created in a certain year; strongest Pokémon; Pokémon with 3 evolutions and other variations.
+* Create buttons/links to access 100 Pokemon at a time - as the index displays all 1126 Pokémon which is a little untidy
+* Create a filter for Pokémon displayed - for example Pokémon which were created in a certain year; strongest Pokémon; Pokémon with 3 evolutions and other variations
