@@ -139,6 +139,12 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 * Axios requests
 * SCSS
 
+## Wins:
+
+* GIFs on the Home Page are a nice touch.
+* Completing a project in a short period of time.
+* The colour scheme is suitable and congruent with the Pokémon ball!
+
 ## Challenges:
 
 * Creating the Pokémon evolution images and names to display correctly.
