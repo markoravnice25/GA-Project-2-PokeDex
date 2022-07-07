@@ -122,6 +122,10 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 
 ## Featured Code:
 
+* Thius is the first project where we learned to have different JavaScript files seperated into component files which are called in App.js. This was a great learning experience of how to make code cleaner and more easily readable/accessible for others who look at the code later.
+
+<img width="461" alt="pokedex-featured-code" src="https://user-images.githubusercontent.com/101732786/177733742-c3dcfb14-5670-4105-8ec4-7b03b24aacb9.png">
+
 * This was the first project where we used an axios request to fetch data from a public API. It's a really simple piece of code but doing it for the first time was challenging. In this case, we have a useState() for pokemons which we update upon fetching data from the API and we also destructure { data } to have cleaner code. A good learning was also which dependencies to use at the end of the useEffect() - in this case, we use an empty array because we want the data to be fetched only once (upon initial render).
 
 <img width="1158" alt="featured-code-project-2" src="https://user-images.githubusercontent.com/101732786/176465320-d336d1c5-accf-4f3f-be7a-73c1861d12d9.png">
