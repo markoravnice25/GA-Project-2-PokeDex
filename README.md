@@ -122,7 +122,7 @@ The most complicated piece was the Pokémon show (PokemonShow.js) page. Here we
 
 ## Featured Code:
 
-* Thius is the first project where we learned to have different JavaScript files seperated into component files which are called in App.js. This was a great learning experience of how to make code cleaner and more easily readable/accessible for others who look at the code later.
+* This was the first project where we learned to have different JavaScript files seperated into component files which are called in App.js. This was a great learning experience on how to make code cleaner and more easily readable/accessible for others who look at the code later.
 
 <img width="461" alt="pokedex-featured-code" src="https://user-images.githubusercontent.com/101732786/177733742-c3dcfb14-5670-4105-8ec4-7b03b24aacb9.png">
 
